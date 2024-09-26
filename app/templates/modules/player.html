@@ -1,0 +1,33 @@
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/player.css' %}">
+
+    <title>Lecteur Radio Belgique</title>
+
+</head>
+<body>
+    <div id="root"></div>
+    <a href="" class="qt-header-play-btn"
+        data-title="Radio Vibration"
+        data-subtitle="la radio des musique electronique"
+        data-logo="4418"
+        data-playtrack="https://vibrationbelgique.ice.infomaniak.ch/vibrationbelgique-high.mp3"
+        data-qtradioid="4427"
+        data-icymetadata="1"
+        data-host="192.168.1.58"
+        data-port="3366"
+        data-channel="1"
+        data-protocol="https">
+        Vibration.fm
+        
+    <audio id="radio-player" controls style="display: none;">
+        <source id="audio-source" src="" type="audio/mpeg">
+    </audio>
+    </a>
+   
+    <script src="{% static 'js/player.js' %}"></script>
+</body>
+</html>

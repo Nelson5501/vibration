@@ -1,0 +1,17 @@
+.qt-header-play-btn {
+    padding: 3px 20px;
+    background-color: #EA14B5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+    font-family: Barlow Semi Condensed;
+}
+
+audio #radio-player{    
+    padding: 1px 2px;
+    background-color: #filter: drop-shadow(0 0 0.75rem crimson);;
+    color: rgb(180, 29, 29);
+   
+}

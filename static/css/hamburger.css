@@ -1,0 +1,118 @@
+/*Hamburger styles*/
+input {
+  display: none;
+}
+
+label {
+  position: static; /* Fixer le label pour qu'il reste toujours en haut */
+  top: 10px;
+  left: 20px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 9999; /* Assurez-vous que ce z-index est très élevé pour qu'il reste au-dessus de tout */
+}
+
+.icon {
+  width: 40px;
+  height: 3px;
+  margin-bottom: 12px;
+  background-color: #EA14B5;
+  border-radius: 1px;
+  transition: all 0.5s ease;
+}
+
+/*Hamburger animation*/
+#menu-toggle:checked + label .icon.top {
+  transform: translateY(15px) rotate(135deg);
+}
+
+#menu-toggle:checked + label .icon.mid {
+  width: 0;
+}
+
+#menu-toggle:checked + label .icon.end {
+  transform: translateY(-15px) rotate(-135deg);
+}
+
+/*Slide out menu styles*/
+.menu-slide {
+  position: fixed; /* Fixer la position pour que le menu glisse depuis la gauche */
+  top: 0;
+  height: 100vh;
+  width: 30%;
+  left: -30%;
+  background-color: black;
+  overflow: auto;
+  transition: left 0.5s ease;
+  text-align: left;
+  z-index: 9998; /* Un z-index inférieur au label pour que le menu passe en dessous */
+}
+
+ul {
+  position: relative;
+  top: 80px;
+}
+
+li {
+  position: relative;
+  top: 50px;
+  list-style-type: none;
+  line-height: 64px;
+  font-size: 24px;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*Slide out menu animation*/
+#menu-toggle:checked ~ .menu-slide {
+  left: 0;
+}
+.reseau {
+  position: absolute;
+  bottom: 0; /* Place le div en bas de la page */
+  left: 50%; /* Positionne horizontalement au centre de la page */
+  transform: translateX(-50%); /* Centrage horizontal */
+  width: 50%; /* Optionnel si vous voulez que le div occupe toute la largeur */
+  display: flex;
+  justify-content: center; /* Centre le contenu à l'intérieur horizontalement */
+  gap: 200px; /* Espacement entre les icônes */
+  padding: 10px;
+  background-color: black; /* Optionnel : couleur de fond */  
+  color: #ffffff; /* Couleur blanche pour les icônes */
+  font-size: 2rem; /* Taille des icônes */
+}
+
+.reseaux {
+  text-align: left;
+  margin-bottom: 10px; /* Ajoute un peu de marge en bas */
+}
+
+.reseaux a {
+  margin: 0 5px;
+  color: #ffffff; /* Assure que les icônes sont blanches */
+}
+
+.reseaux i {
+  font-size: 30px;
+  position: relative;
+  top: 100px;
+}
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333; /* Background color */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Padding for spacing */
+}

@@ -1,0 +1,32 @@
+
+.navbar {
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 2%;
+  
+}
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+.navbar-nav {
+  flex-direction: row;
+  
+  
+}
+
+  li a{
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+  }
+  
+  i{
+      text-decoration: none;
+      color: rgb(128, 128, 128);
+  }

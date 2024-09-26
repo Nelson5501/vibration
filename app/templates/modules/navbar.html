@@ -1,0 +1,21 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  {% include "modules\hamburger.html" %}
+
+      <!-- Logo centré -->
+        <a class="navbar-brand navbar-center" href="/">
+          <img src="{% static 'img/vibration.png' %}" alt="Logo" width="165" height="64">
+        </a>
+    <!-- Bouton de droite -->
+        {% include "modules\player.html" %}
+      </nav>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script> 
